@@ -10,13 +10,23 @@
 
     <title>Document</title>
   </head>
-  <body>
+  <body onload="startTime()">
+    <div class="title bg-primary text-light text-center p-3">
+      <h1 class="display-5"><i class="fa-solid fa-id-card-clip text-light"></i> Selamat datang</h1>
+      <p>User</p>
+    </div>
     <div class="container p-1">
-      <h1 class="display-1">Selamat datang</h1>
       <!-- main menu -->
       <div class="header pt-3">
         <div class="card shadow p-3" style="width: 100%">
-          <h1 class="display-6">Absen Fasilitas Desa</h1>
+          <div class="row">
+            <div class="col-8">
+              <h1 class="display-6"><i class="fa-solid fa-user"></i> Absensi Fasdes</h1>
+            </div>
+            <div class="col-4 display-6 d-flex justify-content-end">
+              <div id="txt" class="bg-info rounded-4 text-light w-100 text-center p-2"><div id="txt"></div></div>
+            </div>
+          </div>
           <div class="card-body">
             <div class="container">
               <div class="row">
@@ -41,21 +51,57 @@
           </div>
         </div>
       </div>
-      <!-- end main menu -->
 
       <!-- status -->
-      <div class="status mt-3">
+      <div class="container mt-3">
         <div class="row text-center">
           <div class="col-6">
-            <div class="card bg-light shadow p-2">Absen Masuk <b>Selesai</b></div>
+            <div class="card bg-primary text-light shadow p-2">
+              Absen Masuk
+              <h5>Selesai</h5>
+            </div>
           </div>
           <div class="col-6">
-            <div class="card bg-light shadow p-2">Absen Pulang <b>Selesai</b></div>
+            <div class="card shadow p-2">
+              Absen Pulang
+              <h5>Selesai</h5>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- end status -->
+      <div class="container mt-4">
+        <h5>Rekap Absen</h5>
+        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 text-center">
+          <div class="col">
+            <div class="card shadow mt-2 p-1">
+              Masuk
+              <h5>0</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow mt-2 p-1">
+              Izin
+              <h5>0</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow mt-2 p-1">
+              Sakit
+              <h5>0</h5>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow mt-2 p-1">
+              Terlambat
+              <h5>0</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- end main menu -->
 
       <!-- nav bottom -->
       <div class="botnav fixed-bottom bg-dark text-light text-center">
@@ -68,5 +114,24 @@
       <!-- end nav bottom -->
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+      }
+
+      function checkTime(i) {
+        if (i < 10) {
+          i = "0" + i;
+        } // add zero in front of numbers < 10
+        return i;
+      }
+    </script>
   </body>
 </html>
