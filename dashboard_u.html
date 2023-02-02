@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
   </head>
   <body onload="startTime()">
     <div class="title bg-primary text-light text-center p-3">
-      <h1 class="display-5"><i class="fa-solid fa-id-card-clip text-light"></i> Selamat datang</h1>
+      <h1 class="display-5">
+        <i class="fa-solid fa-id-card-clip text-light"></i> Selamat datang
+      </h1>
       <p>User</p>
     </div>
     <div class="container p-1">
@@ -20,30 +25,58 @@
       <div class="header pt-3">
         <div class="card shadow p-3" style="width: 100%">
           <div class="row">
-            <div class="col-8">
-              <h1 class="display-6"><i class="fa-solid fa-user"></i> Absensi Fasdes</h1>
+            <div class="col-6">
+              <h1 class="display-6">Absensi Fasdes</h1>
             </div>
-            <div class="col-4 display-6 d-flex justify-content-end">
-              <div id="txt" class="bg-info rounded-4 text-light w-100 text-center p-2"><div id="txt"></div></div>
+            <div class="col-6 display-6 d-flex justify-content-end">
+              <div
+                id="txt"
+                class="bg-info rounded-4 text-light w-100 text-center p-2"
+              >
+                <div id="txt"></div>
+              </div>
             </div>
           </div>
           <div class="card-body">
             <div class="container">
-              <div class="row">
-                <div class="col-4">
+              <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4">
+                <div class="col mt-3">
                   <a href="#" class="text-decoration-none">
-                    <div class="item d-grid bg-primary rounded mx-auto text-center p-2 text-light shadow"><i class="fa-solid fa-camera fa-2x"></i><span>Absensi</span></div>
+                    <div
+                      class="item d-grid bg-primary rounded mx-auto text-center p-2 text-light shadow"
+                    >
+                      <i class="fa-regular fa-calendar fa-2x"></i
+                      ><span>Absen harian</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="col mt-3">
+                  <a href="#" class="text-decoration-none">
+                    <div
+                      class="item d-grid bg-primary rounded mx-auto text-center p-2 text-light shadow"
+                    >
+                      <i class="fa-solid fa-camera-retro fa-2x"></i
+                      ><span>Absen kegiatan</span>
+                    </div>
                   </a>
                 </div>
 
-                <div class="col-4">
+                <div class="col mt-3">
                   <a href="#" class="text-decoration-none">
-                    <div class="item d-grid bg-info rounded mx-auto text-center p-2 text-light shadow"><i class="fa-solid fa-book fa-2x"></i><span>History</span></div>
+                    <div
+                      class="item d-grid bg-info rounded mx-auto text-center p-2 text-light shadow"
+                    >
+                      <i class="fa-solid fa-book fa-2x"></i><span>History</span>
+                    </div>
                   </a>
                 </div>
-                <div class="col-4">
+                <div class="col mt-3">
                   <a href="#" class="text-decoration-none">
-                    <div class="item d-grid bg-secondary rounded mx-auto text-center p-2 text-light shadow"><i class="fa-solid fa-user fa-2x"></i>Profile</div>
+                    <div
+                      class="item d-grid bg-secondary rounded mx-auto text-center p-2 text-light shadow"
+                    >
+                      <i class="fa-solid fa-user fa-2x"></i>Profile
+                    </div>
                   </a>
                 </div>
               </div>
@@ -73,27 +106,16 @@
       <!-- end status -->
       <div class="container mt-4">
         <h5>Rekap Absen</h5>
-        <div class="row row-cols-2 row-cols-md-2 row-cols-lg-4 text-center">
-          <div class="col">
-            <div class="card shadow mt-2 p-1">
+        <div class="row text-center">
+          <div class="col-6">
+            <div class="card bg-info shadow mt-2 p-1">
               Masuk
               <h5>0</h5>
             </div>
           </div>
-          <div class="col">
-            <div class="card shadow mt-2 p-1">
-              Izin
-              <h5>0</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow mt-2 p-1">
-              Sakit
-              <h5>0</h5>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow mt-2 p-1">
+
+          <div class="col-6">
+            <div class="card bg-warning shadow mt-2 p-1">
               Terlambat
               <h5>0</h5>
             </div>
